@@ -1,0 +1,40 @@
+div[main_div]{
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    height: fit-content;
+    margin: 4%;
+
+}
+
+body{
+    text-align: center;
+    margin: 5%;
+    background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX20445054.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+ span{
+    font-size: 180%;
+    font-weight: bold;
+
+ }
+
+
+div{
+    float: left;
+    width: 100%;
+    margin: 1%;
+    font-family: 'Delius', cursive;
+    font-size:100%;
+}
+
+
+input[type="number"]{
+    border-top:0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: inherit;
+    border-bottom-color: black;
+}

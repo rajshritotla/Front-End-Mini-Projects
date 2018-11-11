@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Birthdate (Form Mockup)
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link rel="stylesheet" type="text/css" href="developerstyle.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <div main_div>
+                <div>
+                    <h1><span class="badge badge-pill badge-danger">
+                            Enter your birthdate here & click on button to go to the website for you..
+                        </span></h1>
+                </div>
+                <div class="badge badge-pill badge-warning" style="width:40%">
+                    
+                        <div class="col-md-3">
+                            <input class="form-control" type="number" size="2" min="1" max="12" id="month" placeholder="MM" required>
+                        </div>
+                        <div class="col-md-3">
+                            <input class="form-control" type="number" size="2" min="1" max="31" id="date" placeholder="DD" required>
+                        </div>
+                        <div class="col-md-5">
+                            <input class="form-control" type="number" size="4" min="0000" max="2018" id="year" placeholder="YYYY" required>
+                        </div>    
+                    
+                </div>
+                
+                <div>
+                    <button type="button" class="btn btn-danger badge-pill" onclick="takeToWebsite()"><span>Take me to the website!!</span></button>
+                </div>
+        </div>
+
+        <script>
+            
+            function takeToWebsite() {
+                
+                var flag=7;
+                var date=document.getElementById('date').value;
+                var month=document.getElementById('month').value;
+                var year=document.getElementById('year').value;
+                
+                if(month>12 || month <1){
+                    flag=-1;
+                    document.getElementById('month').focus();
+                }
+
+                if(date>31||date<1){
+                    flag=-1;
+                    document.getElementById('date').focus();
+                }
+                
+                if(month==2){
+                    if(date>29)
+                    {   flag=-1;
+                        document.getElementById('date').focus();
+                    }
+                }
+                
+                if(month==2 && (year%4!=0) && date>28){
+                    flag=-1;
+                    document.getElementById('date').focus();
+                }
+
+                if(year>2018){
+                    flag=-1;
+                    document.getElementById('year').focus();
+                }
+
+                var current = new Date();
+                var age_year=current.getFullYear()-year;
+                var age_month=(current.getMonth()+1)-month;
+                var age_date=current.getDate()-date;
+                
+                if(flag==-1){
+                        flag==7;
+                }
+                else{
+                    if(age_year>=21){
+
+                        flag=1;
+
+                        if(age_year=='21')
+                        {
+                            if(age_month<0){
+                            flag=0;
+                            }
+                            
+                            if(age_month==0){
+                                if(age_date<0){
+                                    flag=0;
+                                }
+                            }
+                                
+                        }
+                        
+                    }
+
+                    else{
+                        flag=0;
+                    }
+                }
+                
+                if(flag==0){
+                    //alert('date '+age_date+ ' month '+age_month+' year '+age_year+' current m '+current.getMonth()+' cu date '+current.getDate());
+                    window.location.href ="https://www.disney.com/";
+                }else if(flag==1){
+                    window.location.href ="http://boomchugalug.com/";
+                }
+            }
+        </script>
+
+    </body>
+  
+</html>
