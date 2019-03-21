@@ -1,0 +1,20 @@
+body{
+    background-image:url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/fb895727075137.5635f8ee187e2.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Press Start 2P', cursive;
+    margin: 3%;
+}
+
+
+div{
+padding: 1%;    
+font-size: 400%;
+font-weight: bold;
+text-align: center;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    height: 3%;
+}
