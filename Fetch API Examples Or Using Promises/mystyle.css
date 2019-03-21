@@ -1,0 +1,28 @@
+            body{
+                background-color: seagreen;
+                color: rgb(3, 3, 83);
+                padding: 2%;
+                font-size: larger;
+            }
+            #showCircles{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+            }
+            #show1,#show2,#show3{
+                margin:2%;
+                padding-top: 2%;
+                border-radius: 100%;
+                width: 150px;
+                height: 150px; 
+                background-color: white;
+                text-align: center;
+                display: inline-flex;
+            }
+            small{
+                font-weight: bolder;
+            }
+           
+        

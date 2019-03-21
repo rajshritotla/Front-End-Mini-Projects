@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Get Data
+        </title>
+        <style>
+            body{
+                background-color: darkslateblue;
+                color: white;
+            }
+
+            ul{ 
+                margin-top: 5%;
+                margin-left: 20%;
+                font-size: 500%;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+
+            //..........................................................................
+            // ENTER PHP / SOURCE HERE  fetch()
+            //..........................................................................
+             fetch(".php")
+            .then((resp) => resp.json()) // Transform the data into json
+            .then(function(color) {
+                
+                    color.forEach(function(element) {
+                        console.log(element);
+                        var parent=document.getElementById("show");
+                        var child =document.createElement("li");
+                        child.innerHTML=element;
+                        parent.appendChild(child);
+                    });
+                
+                });
+        
+        </script>
+    </head>
+    <body>
+        <div>
+            <ul id="show">
+
+            </ul>
+        </div>
+
+    </body>
+</html>

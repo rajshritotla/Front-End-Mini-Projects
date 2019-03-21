@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Flickr Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            img{
+               margin: 2%;
+            }
+            body{
+                background-color: lightcoral;
+            }
+        </style>
+        <script>
+            $(function() {
+                    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", 
+                        { format: "json", tags: "dogs", tagmode: "any" },
+                        function(data) {
+                            console.log(data);
+                            $.each(data.items, function(i,item) {
+                                    $("<img>").attr("src", item.media.m).appendTo("#showImages");
+                                    $("<br>").appendTo("#showImages");
+                            });
+                        });
+                    });
+                    
+
+// ajax not working BECAUSE
+// FETCH API CANNOT FETCH DATA FROM OTHER SERVER IN JS LANGUAGE
+//WITH PHP ALSO THERE ARE ISSUES
+//NO-CORS MODE IS REQUIRED BECAUSE OF CROSS-ORIGIN
+/*
+             
+                     const url = 'http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
+                        fetch(url,{
+                                        mode:"no-cors",
+                                       
+
+                                    })
+                            .then(function(response) {
+                                
+                                return response.blob();
+                            })
+                            .then(function(imageBlob) {
+
+                                        
+                                $("<img>").attr("src", URL.createObjectURL(imageBlob)).appendTo("#showImages");
+                                            
+                            console.log(URL.createObjectURL(imageBlob));
+                                //document.querySelector('img').src = URL.createObjectURL(imageBlob);
+                            });
+                    
+                    */
+ 
+
+                    /*
+             
+                     const url = 'http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
+                        fetch(url,{
+                                        mode:"no-cors",
+                                        format:"json", tags: "dogs", tagmode: "any"
+
+                                    })
+                            .then(function(response) {
+                                
+                                return response.blob();
+                            })
+                            .then(function(imageBlob) {
+
+                                        
+                                $("<img>").attr("src", URL.createObjectURL(imageBlob)).appendTo("#showImages");
+                                            
+                            console.log(URL.createObjectURL(imageBlob));
+                                //document.querySelector('img').src = URL.createObjectURL(imageBlob);
+                            });
+                    
+                    */
+        </script>
+
+    </head>
+    <body>
+        <div id="showImages">
+
+        </div>
+    
+    </body>
+</html>
