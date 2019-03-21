@@ -1,0 +1,45 @@
+body{
+    background-image: url('https://d585tldpucybw.cloudfront.net/sfimages/default-source/labs/kendo/kendo-umbrella/jquery-bg.jpg?sfvrsn=aa6e5083_4');
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'KoHo', sans-serif;
+}
+
+.forBody{
+    margin: 2%;
+    padding: 1%;
+}
+
+h3[name="firstHeading"]{
+    font-size: larger;
+}
+
+.comment{
+    color: chartreuse;
+}
+
+#secondHeading{
+    color: coral;
+}
+
+h3[id="secondHeading"] > p[name="parah1for2"]{
+    color: yellow;
+}
+
+p{
+    font-size: medium;
+}
+
+body div h3[name="thirdHeading"] p[name="parah12"]{
+    color: springgreen;
+}
+
+span + span{
+    font-size: xx-large;
+    color: indianred;
+}
+
+span[note]{
+    font-style: italic;
+    font-size: larger;
+}
