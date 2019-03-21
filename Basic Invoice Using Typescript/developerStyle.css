@@ -1,0 +1,35 @@
+
+div[main]{
+    margin: 2%;
+    padding: 2%;
+    border: 2px solid seagreen;
+    background-color: rgb(210, 238, 210);
+    
+}
+
+div{
+    margin: 1%;
+    height: fit-content;
+}
+
+div[for="forDate"]{
+    float: right;
+}
+
+
+div[for="print"]{
+    float: right;
+}
+
+div[for="shoptitle"]{
+    display: inherit;
+    text-align: center;
+}
+
+#totalBadge{
+    float: right;
+}
+
+.itemTable{
+    text-align: center;
+}
