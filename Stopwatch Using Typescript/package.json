@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/jquery": "^3.3.17",
     "express": "^4.16.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "node": "^10.12.0",
     "typescript": "^2.4.2"
   },
