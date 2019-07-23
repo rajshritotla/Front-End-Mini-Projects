@@ -1,3 +1,7 @@
-Abstract: "Take to website as per calculated age"
+# Abstract
+"Take to website as per calculated age"
+
 This will show a webpage asking user to enter their birthdate and will then calculate age to take user to correct website 
-Used: HTML CSS JS
+
+# Technologies 
+HTML CSS JS
