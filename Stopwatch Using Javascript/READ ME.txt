@@ -1,1 +1,0 @@
-Stopwatch application using JavaScript
