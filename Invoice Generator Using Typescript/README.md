@@ -1,4 +1,4 @@
-This is a very simple invoice application, designed to practice TypeScript.
+This is a simple invoice application, designed to practice TypeScript.
 
 # Invoice exercise
 Created a class (or classes) that resemble an "Invoice" system that a business might use to represent invoices.
