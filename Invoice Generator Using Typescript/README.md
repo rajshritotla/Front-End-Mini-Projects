@@ -1,18 +1,24 @@
 This is a very simple invoice application, designed to practice TypeScript.
 
-Invoice exercise
+# Invoice exercise
 Created a class (or classes) that resemble an "Invoice" system that a business might use to represent invoices.
 
-An Invoice include:
+# An Invoice include:
 Part number (type varchar2)
+
 Country of origin: US, Japan, Saudi Riyal, South African Rand, Mexican peso
+
 Part description (type char[512])
+
 Quantity of an item (type decimal)
+
 Price per item (type float)
+
 Discount applied? (type varchar[128])
+
 Invoice state
 
-Requirements
+# Requirements
 A constructor that initializes it with a Object Literal
 
 The country of origin is indicated with an Object Literal, called Country. It has a setup like this Country.US.{name, symbol,hasTaxRate} for all the countries listed.
